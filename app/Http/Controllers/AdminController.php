@@ -9,14 +9,15 @@ class AdminController extends Controller
     public function index() {
         $datos=DB::select(" select * from producto ");
         return view('admin.index')->with("datos", $datos);
-
+ 
     }
 
     public function create(Request $request){
         try{
-            $sql=DB::insert("insert into producto(id_producto,image,nombre,precio,cantidad) values(?,?,?,?,?) ",[
+            $sql=DB::insert("insert into producto(id_producto,image,categoria,nombre,precio,cantidad) values(?,?,?,?,?,?) ",[
                 $request->txtcodigo,
                 $request->txtimage,
+                $request->txtcategoria,
                 $request->txtnombre,
                 $request->txtprecio,
                 $request->txtcantidad
@@ -35,8 +36,9 @@ class AdminController extends Controller
 
     public function update(Request $request){
         try{
-            $sql=DB::update("Update producto set image=?, nombre=?, precio=?, cantidad=? where id_producto=?", [
+            $sql=DB::update("Update producto set image=?, categoria=?, nombre=?, precio=?, cantidad=? where id_producto=?", [
                 $request->txtimage,
+                $request->txtcategoria,
                 $request->txtnombre,
                 $request->txtprecio,
                 $request->txtcantidad,

@@ -50,6 +50,18 @@
                 </div>
 
                 <div class="mb-3">
+                    <select name="txtcategoria" class="form-select" id="exampleSelect" aria-label="Default select example">
+                        <option selected>Categoría del producto</option>
+                        <option value="Tacos">Tacos</option>
+                        <option value="Tortas/Hamburguesas">Tortas/Hamburguesas</option>
+                        <option value="Burritos">Burritos</option>
+                        <option value="Quesadillas">Quesadillas</option>
+                        <option value="Postres">Postres</option>
+                        <option value="Bebidas">Bebidas</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nombre del producto</label>
                     <input type="text" name="txtnombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
@@ -82,10 +94,11 @@
                 <tr>
                     <th scope="col">CODIGO</th>
                     <th scope="col">IMAGEN</th>
+                    <th scope="col">CATEGORÍA</th>
                     <th scope="col">NOMBRE</th>
                     <th scope="col">PRECIO</th>
                     <th scope="col">CANTIDAD</th>
-                    <th></th>
+                    <th></th>       
                 </tr>
             </thead>
             <tbody class="table-group-divider">
@@ -97,8 +110,9 @@
                                 <img src="{{ asset('assets2/img/' . $item->image) }}" alt="Imagen del producto" style="width: 100px;">
                             @endif
                         </th>
+                        <td>{{$item->categoria}}</td>
                         <td>{{$item->Nombre}}</td>
-                        <td>$ {{$item->Precio}}</td>
+                        <td>{{$item->Precio}}</td>
                         <td>{{$item->cantidad}}</td>
                         <td>
                             <a href="" data-bs-toggle="modal" data-bs-target="#modalEditar{{$item->id_producto}}" class="btn btn-warning btn-sn"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -127,6 +141,18 @@
                                         <label for="formFile" class="form-label">Imagen del producto</label>
                                         <input name="txtimage" value="{{$item->image}}" class="form-control" type="file" id="formFile">
                                     </div>
+
+                                    <div class="mb-3">
+                                        <select value="{{$item->categoria}}" name="txtcategoria"  class="form-select"  id="exampleSelect" aria-label="Default select example">
+                                            <option selected>Categoría del producto</option>
+                                            <option value="1">Tacos</option>
+                                            <option value="2">Tortas/Hamburguesas</option>
+                                            <option value="3">Burritos</option>
+                                            <option value="4">Quesadillas</option>
+                                            <option value="5">Postres</option>
+                                            <option value="6">Bebidas</option>
+                                        </select>
+                                    </div>                                    
 
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Nombre del producto</label>

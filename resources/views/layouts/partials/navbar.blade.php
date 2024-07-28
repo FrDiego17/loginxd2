@@ -18,7 +18,7 @@
               <a class="nav-link active mx-lg-1" aria-current="page" href="/logout">Cerrar Sesion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active mx-lg-1" href="#">Menú</a>
+              <a class="nav-link active mx-lg-1" href="/menu">Menú</a>
             </li>
             <li class="nav-item d-lg-flex d-none logo-container">
                 <img src="{{ url('assets2/img/calavera-mexicana 1.png')}}" alt="Logo" class="logo">
@@ -58,7 +58,7 @@
               <a class="nav-link active mx-lg-1" aria-current="page" href="/login">Inicio de Sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active mx-lg-1" href="#">Menú</a>
+              <a class="nav-link active mx-lg-1" href="/menu">Menú</a>
             </li>
             <li class="nav-item d-lg-flex d-none logo-container">
                 <img src="{{ url('assets2/img/calavera-mexicana 1.png')}}" alt="Logo" class="logo">
