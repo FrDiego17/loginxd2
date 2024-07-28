@@ -28,7 +28,7 @@
                 <a class="nav-link active mx-lg-1" href="chat.blade.html">chat</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active mx-lg-1" href="#"><!--{{auth()->user()->username}}-->Contactanos</a>
+                <a class="nav-link active mx-lg-1" href="#">{{auth()->user()->username}}</a>
             </li>
           </ul>
         </div>
