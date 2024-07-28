@@ -14,7 +14,7 @@ class AdminController extends Controller
 
     public function create(Request $request){
         try{
-            $sql=DB::insert("insert into producto(id_producto,image,categoria,nombre,precio,cantidad) values(?,?,?,?,?,?) ",[
+            $sql=DB::insertProduct("insert into producto(id_producto,image,categoria,nombre,precio,cantidad) values(?,?,?,?,?,?) ",[
                 $request->txtcodigo,
                 $request->txtimage,
                 $request->txtcategoria,
@@ -34,7 +34,7 @@ class AdminController extends Controller
 
     }
 
-    public function update(Request $request){
+    public function updateProduct(Request $request){
         try{
             $sql=DB::update("Update producto set image=?, categoria=?, nombre=?, precio=?, cantidad=? where id_producto=?", [
                 $request->txtimage,
@@ -59,7 +59,7 @@ class AdminController extends Controller
 
     }
 
-    public function delete($id){
+    public function deleteProduct($id){
         try{
             $sql=DB::delete(" delete from producto where id_producto=$id");
         } catch(\Throwable $th){
