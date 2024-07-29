@@ -35,7 +35,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav d-flex justify-content-center flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active mx-lg-1" aria-current="page" href="/logout">Cerrar Sesión</a>
+            <a class="nav-link active mx-lg-1" aria-current="page" href="#">Inicio de Sesión</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active mx-lg-1 " href="menu.html">Menú</a>
@@ -45,7 +45,7 @@
               <p class="brand-name">ByteMex</p>
           </li>
           <li class="nav-item">
-              <a class="nav-link active mx-lg-1" href="chat">Chat</a>
+              <a class="nav-link active mx-lg-1" href="#">Pedidos en línea</a>
           </li>
           <li class="nav-item">
               <a class="nav-link active mx-lg-1" href="#footer">Contáctanos</a>
@@ -68,7 +68,7 @@
     <img src="{{ url('assets2/img/restfuera.jpeg')}}">
     <img src="{{ url('assets2/img/personas.png')}}">
   </section>
-
+  @auth
   <main class="container-fluid " id="doodles">
     @for ($i = 0; $i < sizeof($filtro); $i++)
       <div class="p-2">
@@ -109,6 +109,51 @@
       </div>
     @endfor  
   </main>
+  @endauth
+
+  @guest
+  <main class="container-fluid " id="doodles">
+    @for ($i = 0; $i < sizeof($filtro); $i++)
+      <div class="p-2">
+        <p class=" honk-menu text-center">{{array_keys($filtro)[$i]}}</p>
+          <div id="carouselExampleControls{{$i}}" class="carousel">
+            <div class="carousel-inner">
+              @foreach ($filtro[array_keys($filtro)[$i]] as $producto)
+                  <div class="carousel-item active">
+                  <div class="container">  
+                    <div class="card">
+                      @if (isset($producto->image))
+                        <div class="imgBx">  
+                          <img src="{{ asset('assets2/img/' . $producto->image)}}">  
+                        </div>
+                      @endif    
+                      <div class="contentBx">  
+                      
+                        <h2>{{$producto->Nombre}}</h2> 
+                        <h2>Precio:</h2> 
+                        <h4 class="text-white-50">${{ $producto->Precio }}</h4>  
+                        <a href="#">Comprar</a>  
+                      </div>  
+                    </div>  
+                  </div>
+                </div>
+                
+              @endforeach 
+            </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls{{$i}}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls{{$i}}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    @endfor  
+  </main>
+  @endguest
+  
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="{{ url('assets/js/bootstrap.min.js')}}"

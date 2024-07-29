@@ -11,6 +11,8 @@
 </head>
 <body>
     <a class="nav-link active mx-lg-1" aria-current="page" href="/logout">Cerrar Sesion</a>
+    <a class="nav-link active mx-lg-1" aria-current="page" href="/registeradmin">Registar Admin</a>
+    <a class="nav-link active mx-lg-1" aria-current="page" href="/menu">Menu</a>
 
     <h1 class="text-center p-3">Admin</h1>
     @if(session("correcto"))
@@ -37,7 +39,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <form action="{{route("admin.create")}}" method="post">
+            <form action="{{route("admin.createProduct")}}" method="post">
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Codigo del producto</label>
@@ -116,7 +118,7 @@
                         <td>{{$item->cantidad}}</td>
                         <td>
                             <a href="" data-bs-toggle="modal" data-bs-target="#modalEditar{{$item->id_producto}}" class="btn btn-warning btn-sn"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a href="{{route("admin.delete", $item->id_producto)}}" onclick="return res()" class="btn btn-danger btn-sn"><i class="fa-solid fa-trash"></i></a>
+                            <a href="{{route("admin.deleteProduct", $item->id_producto)}}" onclick="return res()" class="btn btn-danger btn-sn"><i class="fa-solid fa-trash"></i></a>
                         </td>
 
                         
@@ -130,7 +132,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                <form action="{{route("admin.update")}}" method="post">
+                                <form action="{{route("admin.updateProduct")}}" method="post">
                                     @csrf
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Codigo del producto</label>

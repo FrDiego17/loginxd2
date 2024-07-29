@@ -1,12 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LogoutController;
-use App\Http\Controllers\AdminController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\registerAdminController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,6 +31,9 @@ Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::middleware('admin.auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::post('/registrar-producto', [AdminController::class, 'createProduct'])->name('admin.createProduct');
+    Route::post('/modificar-producto', [AdminController::class, 'updateProduct'])->name('admin.updateProduct');
+    Route::get('/eliminar-producto-{id}', [AdminController::class, 'deleteProduct'])->name('admin.deleteProduct');
 });
 
 
@@ -40,3 +44,10 @@ Route::post('/modificar-producto', [AdminController::class, 'update'])->name('ad
 Route::get('/eliminar-producto-{id}', [AdminController::class, 'delete'])->name('admin.delete');
 
 /*ruta para elchat */
+Route::middleware('admin.auth')->group(function () {
+    Route::get('/registeradmin', [registerAdminController::class, 'show'])->name('admin.showRegisterAdmin');
+    Route::post('/registrar-admin', [registerAdminController::class, 'createAdmin'])->name('admin.createAdmin');
+    Route::post('/modificar-admin', [registerAdminController::class, 'updateAdmin'])->name('admin.updateAdmin');
+    Route::get('/eliminar-admin-{id}', [registerAdminController::class, 'deleteAdmin'])->name('admin.deleteAdmin');   
+});
+
