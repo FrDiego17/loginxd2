@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +49,7 @@
               <a class="nav-link active mx-lg-1" href="#">Pedidos en línea</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active mx-lg-1" href="#footer">Contáctanos</a>
+              <a class="nav-link active mx-lg-1" href="contactanos">Contáctanos</a>
           </li>
         </ul>
       </div>
@@ -151,7 +152,9 @@
         </div>
       </div>
     @endfor  
+    
   </main>
+  
   @endguest
   
   

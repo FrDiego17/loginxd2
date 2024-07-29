@@ -36,128 +36,28 @@ body {
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
 }
 
-
-.navbar {
-    background-color: transparent !important;
-    border: 0;
-}
-
-.navbar-toggler {
-    background-color: white;
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: center; 
-    flex-grow: 1;
-    gap: 10px;
-}
-
-.nav-link.active{
-    margin-top: 2rem;
-}
-.navbar-nav .nav-item {
-    margin-right: 25px; /* Ajusta este valor para cambiar el espacio entre los elementos */
-}
-
-@media (max-width: 991px) {
-    .navbar-nav .nav-item {
-        margin-right: 0.5rem; /* Ajusta este valor para cambiar el espacio entre los elementos */
-    }
-}
-
-
-.navbar-nav .nav-link.active {
-    color: white;
-    font-size: 14pt;
-    font-family: 'Jockey One', sans-serif;
-    transition: color 0.3s ease;
-    font-weight: bold;
-    padding: 15px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-
-
-.navbar-nav .nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Posición para que la línea esté dentro del texto */
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    z-index: -1;
-    border-radius: 2px;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición de la animación */
-    transform: scaleX(0); /* Inicialmente no visible */
-}
-
-.navbar-nav .nav-link:hover::before {
-    opacity: 1;
-    transform: scaleX(1); /* Llega al ancho completo */
-}
-
-
-
-.navbar-nav .nav-link.active:hover {
-    color: #ffbf00; /* Color de hover original */
-}
-
-.brand-name {
-    margin-top: -1rem;
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    font-size: 22pt;
-}
-
-.logo {
-    height: 6rem; /* Ajusta el tamaño según sea necesario */
-    margin-bottom: 20px;
-}
-
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.offcanvas {
-  background-color: #2f3134; /* Color de fondo diferente */
-}
-
-.offcanvas-header .offcanvas-title {
+.header-link {
   display: flex;
   align-items: center;
+  margin: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.header-link img {
+  height: 40px;
+  margin-right: 10px;
+}
+.header-link span {
+  font-size: 1.5em;
 }
 
-.offcanvas-header .offcanvas-title img {
-  max-height: 50px; /* Ajusta el tamaño máximo según sea necesario */
+.inicio{
+  color: white;
 }
 
-@media (max-width: 991px) {
-  .offcanvas-header .offcanvas-title::after {
-      content: "ByteMex";
-      font-weight: bold;
-      font-family: 'Jockey One';
-      color: white;
-      font-size: 26pt;
-      margin-left: 10px;
-  }
+.inicio:hover{
+    color: #f6bc0c;
 }
-
-.btn-close {
-  background-color: white;
-}
-
-
 
 .u-section-1 {
     background-image: url("../img/wallmenu.jpg");
@@ -29166,14 +29066,14 @@ body {
   .u-container-layout.u-container-layout.u-palette-1-base:before,
   .u-table-alt-palette-1-base tr:nth-child(even) {
     color: #ffffff;
-    background-color: #478ac9;
+    background-color: #000000;
   }
   .u-input.u-palette-1-base,
   .u-field-input.u-palette-1-base,
   .u-button-style.u-palette-1-base,
   .u-button-style.u-palette-1-base[class*="u-border-"] {
     color: #ffffff !important;
-    background-color: #478ac9 !important;
+    background-color: #000000 !important;
   }
   .u-button-style.u-palette-1-base:hover,
   .u-button-style.u-palette-1-base[class*="u-border-"]:hover,

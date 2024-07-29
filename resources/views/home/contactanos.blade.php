@@ -16,56 +16,12 @@
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": ""
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Contacto">
-    <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   
   <body data-home-page="Contacto.html" data-home-page-title="Contacto" data-path-to-root="./" data-include-products="false" class="u-body u-palette-1-base u-xl-mode" data-lang="es">
-    <nav class="navbar bg-body-tertiary navbar-expand-lg static-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                    <img src="{{ url('assets2/img/calavera-mexicana 1.png')}}" alt="Logo ByteMex" class="d-lg-none mr-2">
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav d-flex justify-content-center flex-grow-1 pe-3">
-                <li class="nav-item">
-                    <a class="nav-link active mx-lg-1" aria-current="page" href="/logout">Cerrar Sesion</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active mx-lg-1" href="/menu">Menú</a>
-                </li>
-                <li class="nav-item d-lg-flex d-none logo-container">
-                    <img src="{{ url('assets2/img/calavera-mexicana 1.png')}}" alt="Logo" class="logo">
-                    <p class="brand-name">ByteMex</p>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active mx-lg-1" href="#">Pedidos en línea</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active mx-lg-1" href="/contactanos">Contáctanos</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <a href="/home" class="header-link">
+      <img src="{{ url('assets2/img/flecha.png')}}" alt="Inicio">
+      <span class="inicio">Inicio</span>
+  </a>
     <section class="u-align-center u-clearfix u-container-align-center-md u-container-align-center-sm u-container-align-center-xs u-image u-section-1" id="carousel_c4dd" data-image-width="2048" data-image-height="1441">
       <div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-custom-font u-hover-feature u-text u-text-default u-text-white u-text-1">Contáctanos </p>

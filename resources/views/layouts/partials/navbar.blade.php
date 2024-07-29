@@ -28,38 +28,11 @@
                         <a class="nav-link active mx-lg-1" href="/chat">Chat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active mx-lg-1" href="#">Contactanos</a>
+                        <a class="nav-link active mx-lg-1" href="/contactanos">Contactanos</a>
                     </li>
                 </ul>
             </div>
         </div>
-<<<<<<< HEAD
-=======
-        <div class="offcanvas-body">
-          <ul class="navbar-nav d-flex justify-content-center flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active mx-lg-1" aria-current="page" href="/logout">Cerrar Sesion</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active mx-lg-1" href="/menu">Menú</a>
-            </li>
-            <li class="nav-item d-lg-flex d-none logo-container">
-                <img src="{{ url('assets2/img/calavera-mexicana 1.png')}}" alt="Logo" class="logo">
-                <p class="brand-name">ByteMex</p>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active mx-lg-1" href="chat.blade.html">chat</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active mx-lg-1" href="#">Contáctanos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active mx-lg-1" href="#">{{auth()->user()->username}}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
->>>>>>> c858fdc90e142d3006caab4745f0d1966944f4ad
     </div>
 </nav>
 @endauth
