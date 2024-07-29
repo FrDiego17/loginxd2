@@ -25,7 +25,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: black;
-    background-image: url('../imagenes/backinterfaz.png');
+    background-image: url('../img/backinterfaz.png'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

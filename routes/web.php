@@ -22,6 +22,9 @@ Route::middleware('guest')->group(function () {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/menu', [HomeController::class, 'show'])->name('menu');
+Route::get('/chat', [HomeController::class, 'chat'])->name('chat');
+Route::get('/contactanos', [HomeController::class, 'contactanos'])->name('contactanos');
+
 
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 
@@ -35,3 +38,5 @@ Route::post('/registrar-producto', [AdminController::class, 'create'])->name('ad
 Route::post('/modificar-producto', [AdminController::class, 'update'])->name('admin.update');
 
 Route::get('/eliminar-producto-{id}', [AdminController::class, 'delete'])->name('admin.delete');
+
+/*ruta para elchat */

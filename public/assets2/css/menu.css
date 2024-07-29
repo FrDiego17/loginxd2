@@ -13,10 +13,23 @@
 }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/wallmenu.jpg);
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: static;
+  height: 100vh; /* Ajusta la altura al 100% de la altura del viewport */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+} 
 
 .imgfondo{
   opacity: 8 !important;
   background-color: rgba(0, 0, 0, 0.9)       !important; 
+  filter: blur(2px);
 
 }
 
