@@ -25,7 +25,7 @@ class HomeController extends Controller
         return view('home.menu')->with("filtro", $filtro);
          
     }
-
+    
     public function chat(){
         return view('home.chat');
     }

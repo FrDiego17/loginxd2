@@ -15,7 +15,10 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav d-flex justify-content-center flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active mx-lg-1" aria-current="page" href="/logout">Cerrar Sesion</a>
+                        <a class="nav-link active mx-lg-1" aria-current="page" href="/logout">Cerrar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-1" aria-current="page" href="/home">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active mx-lg-1" href="/menu">Menú</a>
@@ -28,7 +31,10 @@
                         <a class="nav-link active mx-lg-1" href="/chat">Chat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active mx-lg-1" href="/contactanos">Contactanos</a>
+                        <a class="nav-link active mx-lg-1" href="/contactanos">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-1" href="#">{{auth()->user()->username}}</a>
                     </li>
                 </ul>
             </div>
@@ -68,7 +74,7 @@
                         <a class="nav-link active mx-lg-1" href="#">Pedidos en línea</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active mx-lg-1" href="#">Contáctanos</a>
+                        <a class="nav-link active mx-lg-1" href="/contactanos">Contáctanos</a>
                     </li>
                 </ul>
             </div>

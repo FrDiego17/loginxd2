@@ -47,7 +47,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: static;
-  height: 100vh; /* Ajusta la altura al 100% de la altura del viewport */
   width: 100%;
   z-index: -1; /
 }

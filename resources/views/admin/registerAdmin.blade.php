@@ -10,9 +10,34 @@
     <link rel="icon" href="{{ url('assets2/img/calavera-mexicana.png')}}">
 </head>
 <body>
-    <a class="nav-link active mx-lg-1" aria-current="page" href="/logout">Cerrar Sesion</a>
-    <a class="nav-link active mx-lg-1" aria-current="page" href="/admin">Agregar Producto</a>
-    <a class="nav-link active mx-lg-1" aria-current="page" href="/menu">Menu</a>
+<div class="nav_admin">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-primary border-bottom border-body ">
+                <div class="container-fluid">
+                    <a class="navbar-brand">ByteMex</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/menu">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/admin">Agregar Producto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/logout">Cerrar Sesion</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text text-light">
+                        Bienvenido Administrador
+                    </span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
 
     <h1 class="display-4 welcome-text bien">Admin</h1>
     @if ($errors->any())

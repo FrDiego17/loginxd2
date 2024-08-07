@@ -36,14 +36,6 @@ Route::middleware('admin.auth')->group(function () {
     Route::get('/eliminar-producto-{id}', [AdminController::class, 'deleteProduct'])->name('admin.deleteProduct');
 });
 
-
-Route::post('/registrar-producto', [AdminController::class, 'create'])->name('admin.create');
-
-Route::post('/modificar-producto', [AdminController::class, 'update'])->name('admin.update');
-
-Route::get('/eliminar-producto-{id}', [AdminController::class, 'delete'])->name('admin.delete');
-
-/*ruta para elchat */
 Route::middleware('admin.auth')->group(function () {
     Route::get('/registeradmin', [registerAdminController::class, 'show'])->name('admin.showRegisterAdmin');
     Route::post('/registrar-admin', [registerAdminController::class, 'createAdmin'])->name('admin.createAdmin');

@@ -33,10 +33,10 @@
               <p class="brand-name">ByteMex</p>
           </li>
           <li class="nav-item">
-              <a class="nav-link active mx-lg-1" href="#">Pedidos en línea</a>
+              <a class="nav-link active mx-lg-1" href="/chat">Chat</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active mx-lg-1" href="#footer">Contáctanos</a>
+              <a class="nav-link active mx-lg-1" href="/contactanos">Contáctanos</a>
           </li>
           <li class="nav-item">
               <a class="nav-link active mx-lg-1" href="#">{{auth()->user()->username}}</a>
@@ -79,7 +79,7 @@
             <a class="nav-link active mx-lg-1" aria-current="page" href="/home">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active mx-lg-1 " href="">Menú</a>
+            <a class="nav-link active mx-lg-1 " href="#">Menú</a>
           </li>
           <li class="nav-item d-lg-flex d-none logo-container">
               <img src="{{ url('assets2/img/calavera-mexicana 1.png')}}" alt="Logo" class="logo">
@@ -89,7 +89,7 @@
               <a class="nav-link active mx-lg-1" href="#">Pedidos en línea</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active mx-lg-1" href="#footer">Contáctanos</a>
+              <a class="nav-link active mx-lg-1" href="/contactanos">Contáctanos</a>
           </li>
         </ul>
       </div>

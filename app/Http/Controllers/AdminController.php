@@ -12,9 +12,9 @@ class AdminController extends Controller
  
     }
 
-    public function create(Request $request){
+    public function createProduct(Request $request){
         try{
-            $sql=DB::insertProduct("insert into producto(id_producto,image,categoria,nombre,precio,cantidad) values(?,?,?,?,?,?) ",[
+            $sql=DB::insert("insert into producto(id_producto,image,categoria,nombre,precio,cantidad) values(?,?,?,?,?,?) ",[
                 $request->txtcodigo,
                 $request->txtimage,
                 $request->txtcategoria,
