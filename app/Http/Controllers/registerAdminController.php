@@ -15,9 +15,19 @@ class registerAdminController extends Controller {
 
     public function createAdmin(Request $request) {
         $request->validate([
-            'txtpassword' => 'required|string|min:8|confirmed',
+            'txtpassword' => [
+                'required',
+                'string',
+                'min:8', 
+                'regex:/[a-z]/', // Tiene que tener al menos una letra minúscula
+                'regex:/[A-Z]/', // Tiene que tener al menos una letra mayúscula
+                'regex:/[0-9]/', 
+                'regex:/[@$!%*?&]/', 
+            ],
+        ], [
+            'password.regex' => 'La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un símbolo especial (@$!%*?&).',
         ]);
-
+        
         try {
             $sql = DB::insert("INSERT INTO users (id_admin, username, role, email, password) VALUES (?, ?, ?, ?, ?)", [
                 $request->txtid_admin,

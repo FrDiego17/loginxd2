@@ -38,7 +38,7 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text"> @</span>
                                 <div class="form-floating">
-                                  <input name="email" type="text" class="form-control" id="floatingInputGroup1" placeholder="email">
+                                  <input name="email" type="email" class="form-control" id="floatingInputGroup1" placeholder="email">
                                   <label for="floatingInputGroup1">Correo</label>
                                 </div>
                             </div>
