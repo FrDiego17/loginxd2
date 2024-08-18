@@ -132,6 +132,10 @@ body {
     font-size: 22pt;
 }
 
+.container-fluid{
+    overflow: visible;
+}
+
 .logo {
     height: 6rem; /* Ajusta el tamaño según sea necesario */
     margin-bottom: 20px;
