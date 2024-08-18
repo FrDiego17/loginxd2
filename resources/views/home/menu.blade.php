@@ -15,7 +15,16 @@
 </head>
 <body>
 @include('layouts.partials.navbar2')
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end my-4">
+                <div class="checkbox-wrapper-8">
+                    <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" onclick="toggleLanguage()">
+                    <label for="cb3-8" data-tg-on="EN" data-tg-off="ES" class="tgl-btn"></label>
+                </div>
+            </div>
+        </div>
+    </div>
   <section id="slider">
     <img src="{{ url('assets2/img/tacos_slider.jpeg')}}">
     <img src="{{ url('assets2/img/restaurante.png')}}">
@@ -44,7 +53,7 @@
                         <h2>{{$producto->Nombre}}</h2> 
                         <h2>Precio:</h2> 
                         <h4 class="text-white-50">${{ $producto->Precio }}</h4>  
-                        <a href="#">Comprar</a>  
+                        <a href="#" data-translate="comprar">Comprar</a>  
                       </div>  
                     </div>  
                   </div>
@@ -116,5 +125,7 @@
   <script src="{{ url('assets/js/bootstrap.min.js')}}"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="{{ url('assets2/js/menu.js')}}"></script>
+  <script src="{{ url('assets2/js/translate.js')}}"></script>
+
 </body>
 </html>
