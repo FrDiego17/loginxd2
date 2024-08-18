@@ -19,7 +19,16 @@
 </head>
 <body>
 @include('layouts.partials.navbar2')
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end my-4">
+                <div class="checkbox-wrapper-8">
+                    <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" onclick="toggleLanguage()">
+                    <label for="cb3-8" data-tg-on="EN" data-tg-off="ES" class="tgl-btn"></label>
+                </div>
+            </div>
+        </div>
+    </div>
   <section id="slider">
     <img src="{{ url('assets2/img/tacos_slider.jpeg')}}">
     <img src="{{ url('assets2/img/restaurante.png')}}">

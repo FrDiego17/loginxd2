@@ -16,7 +16,16 @@
 </head>
 <body>
 @include('layouts.partials.navbar')
-  
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-12 d-flex justify-content-end my-4">
+          <div class="checkbox-wrapper-8">
+              <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" onclick="toggleLanguage()">
+              <label for="cb3-8" data-tg-on="EN" data-tg-off="ES" class="tgl-btn"></label>
+          </div>
+      </div>
+  </div>
+</div>
   <div class="chat">
     <div class="chat-title">
       <h1>Mexibot</h1>
@@ -46,5 +55,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    <script src="{{ url('assets2/js/chat.js')}}"></script>
-</body>
+   <script src="{{ url('assets2/js/translate.js')}}"></script>
+
 </html>
