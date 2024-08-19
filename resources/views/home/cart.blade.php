@@ -155,8 +155,8 @@
                             <li class="list-group-item"><b>Total: </b>${{ \Cart::getTotal() }}</li>
                         </ul>
                     </div>
-                    <br><a href="/menu" class="btn btn-dark" data-translate="continTiend">Continue en la tienda</a>
-                    <a href="/checkout" class="btn btn-success" data-translate="proceder">Proceder al Checkout</a>
+                    <br><a href="/menu" class="btn btn-dark" data-translate="continTiend">Continuar en la tienda</a>
+                    <a href="/checkout" class="btn btn-success" data-translate="proceder">Proceder al Pago</a>
                 </div>
             @endif
         </div>
