@@ -113,6 +113,15 @@ const traducciones = {
         'password-admin': 'Contraseña del Admin',
         "reservas": "Reservas",
         "user": "Usuario",
+        "tienda": "Tienda",
+        "carrito": "Carrito",
+        "productoCarri": "Producto(s) en el carrito",
+        "noProduc": "No hay productos en su carrito",
+        "Precio": "Precio",
+        "Sub-total": "Sub-total",
+        "borrarCarri": "Borrar Carrito",
+        "continTiend": "Continue en la tienda",
+        "proceder": "Proceder checkout",
         // Placeholders
         "correo-placeholder": "Ingresa un correo válido",
         "nombre-placeholder": "Ingresa tu nombre",
@@ -233,6 +242,15 @@ const traducciones = {
         'password-admin': 'Admin Password',
         "reservas": "Reservations",
         "user": "User",
+        "tienda": "Store",
+        "carrito": "Cart",
+        "productoCarri": "Product(s) in cart",
+        "noProduc": "No Product(s) In Your Cart",
+        "Precio": "Price",
+        "Sub-total": "Sub-total",
+        "borrarCarri": "Delete Cart",
+        "continTiend": "Continue in the store",
+        "proceder": "Proceed to checkout",
         // Placeholders
         "correo-placeholder": "Enter a valid email",
         "nombre-placeholder": "Enter your name",
@@ -324,3 +342,4 @@ window.addEventListener('load', () => {
 
 
 /*Animacion para lo del admin*/ 
+

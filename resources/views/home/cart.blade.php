@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('assets2/css/cart.css')}}">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow-sm">
@@ -42,13 +43,32 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> 
 
+            
     <div class="container" style="margin-top: 80px">
+        <div class="container-fluid">
+            <div class="col-12 d-flex justify-content-end align-items-center my-4">
+                <div>
+                    <label aria-checked="false" role="switch" class="switch">
+                        <input type="checkbox" id="theme-toggle" />
+                        <span class="slider">
+                            <span class="slider-inner"></span>
+                        </span>
+                    </label>
+                </div>
+                
+                <!-- Botón de cambio de idioma -->
+                <div class="checkbox-wrapper-8 me-3">
+                    <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" onclick="toggleLanguage()">
+                    <label for="cb3-8" data-tg-on="EN" data-tg-off="ES" class="tgl-btn"></label>
+                </div>
+            </div>
+        </div> 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Tienda</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                <li class="breadcrumb-item" data-translate="tienda"><a href="/">Tienda</a></li>
+                <li class="breadcrumb-item active" aria-current="page" data-translate="carrito">Carrito</li>
             </ol>
         </nav>
         @if(session()->has('success_msg'))
@@ -81,9 +101,9 @@
             <div class="col-lg-7">
                 <br>
                 @if(\Cart::getTotalQuantity()>0)
-                    <h4>{{ \Cart::getTotalQuantity()}} Producto(s) en el carrito</h4><br>
+                    <h4 data-translate="productoCarri">{{ \Cart::getTotalQuantity()}} Producto(s) en el carrito</h4><br>
                 @else
-                    <h4>No Product(s) In Your Cart</h4><br>
+                    <h4 data-translate="noProduc">No Product(s) In Your Cart</h4><br>
                     <a href="/menu" class="btn btn-dark">Continue en la tienda</a>
                 @endif
 
@@ -95,8 +115,8 @@
                         <div class="col-lg-5">
                             <p>
                                 <b><a href="/shop/{{ $item->attributes->slug }}">{{ $item->name }}</a></b><br>
-                                <b>Price: </b>${{ $item->price }}<br>
-                                <b>Sub Total: </b>${{ \Cart::get($item->id)->getPriceSum() }}<br>
+                                <b data-translate="Precio">Price: </b>${{ $item->price }}<br>
+                                <b data-translate="Sub-total">Sub Total: </b>${{ \Cart::get($item->id)->getPriceSum() }}<br>
                                 {{--                                <b>With Discount: </b>${{ \Cart::get($item->id)->getPriceSumWithConditions() }}--}}
                             </p>
                         </div>
@@ -124,7 +144,7 @@
                 @if(count($cartCollection)>0)
                     <form action="{{ route('cart.clear') }}" method="POST">
                         {{ csrf_field() }}
-                        <button class="btn btn-secondary btn-md">Borrar Carrito</button> 
+                        <button class="btn btn-secondary btn-md" data-translate="borrarCarri">Borrar Carrito</button> 
                     </form>
                 @endif
             </div>
@@ -135,8 +155,8 @@
                             <li class="list-group-item"><b>Total: </b>${{ \Cart::getTotal() }}</li>
                         </ul>
                     </div>
-                    <br><a href="/menu" class="btn btn-dark">Continue en la tienda</a>
-                    <a href="/checkout" class="btn btn-success">Proceder al Checkout</a>
+                    <br><a href="/menu" class="btn btn-dark" data-translate="continTiend">Continue en la tienda</a>
+                    <a href="/checkout" class="btn btn-success" data-translate="proceder">Proceder al Checkout</a>
                 </div>
             @endif
         </div>
@@ -146,6 +166,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ url('assets2/js/translate.js')}}"></script>
 </body>
 </html>
 
