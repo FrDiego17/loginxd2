@@ -8,7 +8,7 @@ body {
   font-weight: 300;
   line-height: 1.42em;
   color:#A7A1AE;
-  background-color: white;
+  background-color: rgb(204, 204, 204);
 }
 
 .welcome-text {
@@ -631,7 +631,7 @@ h2 a {
 
 .dark-mode {
   background-color: #252424; /* Color de fondo oscuro */
-  color: #ffffff; /* Color del texto por defecto */
+  color: #d4d4d4; /* Color del texto por defecto */
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif; /* Fuente por defecto */
@@ -646,22 +646,378 @@ h2 a {
   background-color: #ffffff;
 }
 
-
-:root {
-  --text-color: #000000; /* Negro *//* Gris oscuro */
-}
-
-/* Modo Oscuro */
-.dark-mode { 
-  --text-color: #ffffff;  /* Blanco suave semitransparente */
-}
-
-
 .admin{
   font-weight: bold;
   color: var(--text-color);
   transition: color 0.3s ease-in-out;
   font-family: 'Alata';
   font-size: 35pt;
+  margin-bottom: 3rem;
 }
 
+/* From Uiverse.io by Praashoo7 */ 
+/* CodePen Card */
+
+
+.container {
+  display: flex;
+  justify-content: space-around; /* Espacio igual entre las tarjetas */
+  flex-wrap: wrap; /* Para que las tarjetas se envuelvan en caso de que no quepan en una fila */
+  padding: 10px;
+}
+
+
+.main {
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+.card {
+  position: relative; /* Añadido para que el card_back se posicione correctamente */
+  width: 15em;
+  height: 10em;
+  background: linear-gradient(270deg, #7a3877, #7b3e7e, #136180, #609fb8a9);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+  transition: .4s ease-in-out;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+.fl {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+.fl:hover .fullscreen {
+  scale: 1.2;
+}
+
+.fl:hover .fullscreen_svg {
+  fill: white;
+}
+
+.fullscreen {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 5px;
+  background-color: #727890;
+  margin: 1em;
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s ease-in-out;
+  box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+.fullscreen_svg {
+  width: 15px;
+  height: 15px;
+  fill: rgb(177, 176, 176);
+  transition: .2s ease-in-out;
+}
+
+.card_back {
+  position: absolute;
+  width: 15em;
+  height: 13em;
+  background-color: var(--card-back-color);
+  border-radius: 7px;
+  margin-top: 1em; /* Ajuste inicial para que esté un poco más abajo */
+  margin-left: 2em; /* Ajuste inicial para que esté un poco a la derecha */
+  transition: margin 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: -1;
+}
+
+:root {
+  --text-color-light: #ffffff; /* Blanco para modo claro */
+  --text-color-dark: #000000;  /* Negro para modo oscuro */
+  --card-back-color-light: rgba(12, 11, 11, 0.8); /* Color oscuro para la tarjeta en modo claro */
+  --card-back-color-dark: rgba(255, 255, 255, 0.815); /* Color claro para la tarjeta en modo oscuro */
+}
+
+/* Modo Oscuro */
+.dark-mode .data .text .text_m  {
+  color: var(--text-color-dark); /* Texto negro en modo oscuro */
+}
+
+.data .text .text_m {
+  color: var(--text-color-light); /* Texto blanco en modo claro */
+  transition: color 0.3s ease-in-out;
+}
+
+.dark-mode .card_back {
+  background-color: var(--card-back-color-dark); /* Tarjeta blanca en modo oscuro */
+}
+
+.card_back {
+  background-color: var(--card-back-color-light); /* Tarjeta oscura en modo claro */
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+
+
+.main .card_back {
+  margin-top: -0.1em; /* Ajusta la distancia vertical inicial para que no esté tan abajo */
+  margin-left: 1em; /* Ajusta la distancia horizontal inicial si es necesario */
+  transition: all 0.3s ease; /* Suaviza la transición */
+  transform: scale(1); /* Estado inicial sin escalado */
+  height: 15.25em; /* Ajusta la altura si es necesario */
+}
+
+.main:hover .card_back {
+  margin-top: 0em; /* Mueve hacia arriba al hacer hover */
+  margin-left: -0.5em; /* Mueve hacia la izquierda al hacer hover */
+  transform: scale(1.1); /* Escala la tarjeta al hacer hover */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+  z-index: -1; /* Asegura que la tarjeta esté en primer plano */
+}
+
+.main:hover .fl {
+  opacity: 1;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+
+.data {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.img {
+  width: 2.25em;
+  height: 2.25em;
+  background-color: #252525;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1.5em;
+  font-family: Montserrat;
+  color: white;
+}
+
+.text_m {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.text_s {
+  font-size: 0.7em;
+}
+
+.btns {
+  display: flex;
+  gap: 0.5em;
+  transition: .2s ease-in-out;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .2s ease-in-out;
+}
+
+.likes_text {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.likes_svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.likes:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.comments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .24s ease-in-out;
+}
+
+.comments_text {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.comments_svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.comments:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.views {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .28s ease-in-out;
+}
+
+.views_text {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.views_svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.views:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.main:hover .likes {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+.main:hover .comments {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+.main:hover .views {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+
+
+/* The Main Switch */
+
+.card_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 0.8em;
+  width: 14em;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-size: 0.8em;
+  align-self: center;
+  outline: none;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+button::after {
+  content: "(Hold Me)";
+  opacity: 0;
+  position: absolute;
+}
+
+button::before {
+  content: "∞";
+  font-size: 3.5em;
+  position: absolute;
+  opacity: 0;
+  left: 1.6em;
+  top: -0.36em;
+  transition: .4s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+button:hover::after {
+  position: relative;
+  opacity: 1;
+  font-size: 0.1em;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+button:active {
+  scale: 1.1;
+  opacity: 1;
+  color: transparent;
+  background: linear-gradient(90deg, #ce68d9, #45c6db, #45db79, #9f45b0, #e54ed0, #ffe4f2);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 1s ease infinite;
+  -moz-animation: AnimationName 1s ease infinite;
+  animation: AnimationName 1s ease infinite;
+}
+
+button:active::before {
+  color: white;
+  opacity: 1;
+}

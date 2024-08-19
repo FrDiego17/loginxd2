@@ -33,5 +33,7 @@ class HomeController extends Controller
     public function contactanos(){
         return view('home.contactanos');
     }
+
+    
 }
 

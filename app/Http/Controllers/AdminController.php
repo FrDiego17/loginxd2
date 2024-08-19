@@ -12,6 +12,11 @@ class AdminController extends Controller
  
     }
 
+    public function reservasAdmin() {
+        return view('admin.reservasAdmin');
+    }
+    
+
     public function createProduct(Request $request){
         try{
             $sql=DB::insert("insert into producto(id_producto,image,categoria,nombre,precio,cantidad) values(?,?,?,?,?,?) ",[

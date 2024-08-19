@@ -111,6 +111,8 @@ const traducciones = {
         'modificar': 'Modificar',
         'email-admin': 'Email del Admin',
         'password-admin': 'Contraseña del Admin',
+        "reservas": "Reservas",
+        "user": "Usuario",
         // Placeholders
         "correo-placeholder": "Ingresa un correo válido",
         "nombre-placeholder": "Ingresa tu nombre",
@@ -229,6 +231,8 @@ const traducciones = {
         'modificar': 'Modify',
         'email-admin': 'Admin Email',
         'password-admin': 'Admin Password',
+        "reservas": "Reservations",
+        "user": "User",
         // Placeholders
         "correo-placeholder": "Enter a valid email",
         "nombre-placeholder": "Enter your name",

@@ -27,10 +27,13 @@ Route::get('/chat', [HomeController::class, 'chat'])->name('chat');
 Route::get('/contactanos', [HomeController::class, 'contactanos'])->name('contactanos');
 
 
+
+
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::middleware('admin.auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/reservasadmin', [AdminController::class, 'reservasAdmin'])->name('admin.reservasAdmin');
     Route::post('/registrar-producto', [AdminController::class, 'createProduct'])->name('admin.createProduct');
     Route::post('/modificar-producto', [AdminController::class, 'updateProduct'])->name('admin.updateProduct');
     Route::get('/eliminar-producto-{id}', [AdminController::class, 'deleteProduct'])->name('admin.deleteProduct');

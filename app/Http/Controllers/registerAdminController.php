@@ -13,6 +13,8 @@ class registerAdminController extends Controller {
         return view('admin.registerAdmin')->with("datos", $datos);
     }
 
+    
+
     public function createAdmin(Request $request) {
         $request->validate([
             'txtpassword' => [
@@ -93,4 +95,8 @@ class registerAdminController extends Controller {
             return back()->with("incorrecto", "Error al eliminar: " . $e->getMessage());
         }
     }
+
+    
+
+
 }

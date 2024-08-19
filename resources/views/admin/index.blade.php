@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}"> 
     <link rel="stylesheet" href="{{ url('assets2/css/admin.css')}}">
     <script src="https://kit.fontawesome.com/beae16a269.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="{{ url('assets2/img/calavera-mexicana.png')}}">
+    <link rel="icon" href="{{ url('assets2/img/favicon.webp')}}">
 </head>
 <body>
     <div class="nav_admin">
@@ -22,6 +22,9 @@
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/menu" data-translate="menu">Menú</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/reservasadmin" data-translate="reservas">Reservas</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/registeradmin" data-translate="Register Admin">Registar Admin</a>
@@ -56,7 +59,7 @@
             </div>
         </div>
     </div>
-    <h1 class="text-center p-3 admin glow" data-translate="Admi" >Administrador</h1>
+    <h1 class="text-center p-3 glow admin" data-translate="Admi" >Administrador</h1>
     @if(session("correcto"))
         <div class="alert alert-success" data-translate="{{session("correcto")}}">{{session("correcto")}}</div>
     @endif
