@@ -34,6 +34,9 @@ class HomeController extends Controller
         return view('home.contactanos');
     }
 
+    public function pago(){
+        return view('home.pago');
+    }
     
 }
 

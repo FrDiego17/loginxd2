@@ -5,39 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/pago.css">
+    <link rel="stylesheet" href={{ url('assets2/css/pago.css')}}>>
+    <link rel="stylesheet" href={{ url('assets2/css/estilo.css')}}>
     <title>Pago</title>
 </head>
 
 <body>
-    <div id="nav_vista">
-        <header> 
-          <nav class="navbar bg-body-tertiary navbar-expand-lg">
-            <div class="offcanvas-body">
-              <ul class="navbar-nav d-flex justify-content-center flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active mx-lg-1" aria-current="page" href="#">Regresar al Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active mx-lg-1" href="menu.html">Menú</a>
-                </li>
-                <li class="nav-item d-lg-flex d-none logo-container">
-                    <img src="../img/calavera-mexicana.png" alt="Logo" class="logo">
-                    <p class="brand-name">ByteMex</p>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active mx-lg-1" href="#">Pedidos en línea</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active mx-lg-1" href="#footer">Contáctanos</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </header>
-    </div>
-
 
     <div class="container-fluid background">
         <div class="row padding-top-20">
@@ -65,21 +38,21 @@
                                     </div>
                                     <div class="col-12 panel-body basket-body">
                                         <div class="row product">
-                                            <div class="col-2 product-image"><img src="../imagenes/hamburguesa_birria.png" class="img-fluid" alt="Product Image"></div>
+                                            <div class="col-2 product-image"><img src={{ url('assets2/img/hamburguesa_birria.png')}} class="img-fluid" alt="Product Image"></div>
                                             <div class="col-5">Hamburguesa de Birria<br><span class="additional">Combo de haamburguesa</span></div>
                                             <div class="col-2 text-end"><span class="sub">Unidad</span> Cant. 1</div>
                                             <div class="col-3 text-end"><span class="sub">Precio<br></span>$7.50</div>
                                         </div>
 
                                         <div class="row product">
-                                            <div class="col-2 product-image"><img src="../imagenes/tacos_pastor.png" class="img-fluid" alt="Product Image"></div>
+                                            <div class="col-2 product-image"><img src={{ url('assets2/img/tacos_pastor.png')}} class="img-fluid" alt="Product Image"></div>
                                             <div class="col-5">Tacos al Pastor<br><span class="additional">Orden de tacos al pastor</span></div>
                                             <div class="col-2 text-end"><span class="sub">Unidad</span> Cant. 1</div>
                                             <div class="col-3 text-end"><span class="sub">Precio<br></span>$4.00</div>
                                         </div>
 
                                         <div class="row product">
-                                            <div class="col-2 product-image"><img src="../imagenes/quesadilla_pollo.png" class="img-fluid" alt="Product Image"></div>
+                                            <div class="col-2 product-image"><img src={{ url('assets2/img/quesadilla_pollo.png')}} class="img-fluid" alt="Product Image"></div>
                                             <div class="col-5">Quesadilla de Pollo<br><span class="additional">Combo de Quesadilla</span></div>
                                             <div class="col-2 text-end"><span class="sub">Unidad</span> Cant. 1</div>
                                             <div class="col-3 text-end"><span class="sub">Precio<br></span>$4.00</div>
