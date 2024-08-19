@@ -9,7 +9,7 @@ use Illuminate\Database\QueryException;
 
 class registerAdminController extends Controller {
     public function show() {
-        $datos = DB::select("SELECT * FROM users");
+        $datos = DB::select("SELECT * FROM users Where role = 'admin' ");
         return view('admin.registerAdmin')->with("datos", $datos);
     }
 
@@ -25,7 +25,8 @@ class registerAdminController extends Controller {
                 'regex:/[@$!%*?&]/', 
             ],
         ], [
-            'password.regex' => 'La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un símbolo especial (@$!%*?&).',
+            'txtpassword.min' => 'La Contraseña debe contener al menos 8 caracteres',
+            'txtpassword.regex' => 'La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un símbolo especial (@$!%*?&).',
         ]);
         
         try {
