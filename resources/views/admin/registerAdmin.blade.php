@@ -158,7 +158,7 @@
                             <a href="" data-bs-toggle="modal" data-bs-target="#modalEditar{{$item->id_admin}}" class="btn btn-warning btn-sn">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a href="#" onclick="return confirmDelete(event);" class="btn btn-danger btn-sn">
+                            <a href="{{route("admin.deleteAdmin", $item->id)}}" onclick="return confirmDelete(event);" class="btn btn-danger btn-sn">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>

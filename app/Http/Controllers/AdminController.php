@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
 {
     public function index() {
-        $datos=DB::select(" select * from producto ");
+        $datos=DB::select(" select * from products ");
         return view('admin.index')->with("datos", $datos);
  
     }
@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function createProduct(Request $request){
         try{
-            $sql=DB::insert("insert into producto(id_producto,image,categoria,nombre,precio,cantidad) values(?,?,?,?,?,?) ",[
+            $sql=DB::insert("insert into products(id_producto,image,categoria,nombre,precio,cantidad) values(?,?,?,?,?,?) ",[
                 $request->txtcodigo,
                 $request->txtimage,
                 $request->txtcategoria,
@@ -41,7 +41,7 @@ class AdminController extends Controller
 
     public function updateProduct(Request $request){
         try{
-            $sql=DB::update("Update producto set image=?, categoria=?, nombre=?, precio=?, cantidad=? where id_producto=?", [
+            $sql=DB::update("Update products set image=?, categoria=?, nombre=?, precio=?, cantidad=? where id_producto=?", [
                 $request->txtimage,
                 $request->txtcategoria,
                 $request->txtnombre,
@@ -66,7 +66,7 @@ class AdminController extends Controller
 
     public function deleteProduct($id){
         try{
-            $sql=DB::delete(" delete from producto where id_producto=$id");
+            $sql=DB::delete(" delete from products where id_producto=$id");
         } catch(\Throwable $th){
             $sql = 0;
         }

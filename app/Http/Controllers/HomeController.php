@@ -13,7 +13,7 @@ class HomeController extends Controller
     }
 
     public function show(){
-        $datos=DB::select(" select * from producto ");
+        $datos=DB::select(" select * from products ");
         $filtro=array();
         foreach ($datos as $key => $dato){
             if(array_key_exists($dato->categoria, $filtro)){
