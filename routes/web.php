@@ -50,9 +50,18 @@ Route::middleware('admin.auth')->group(function () {
     Route::get('/eliminar-admin-{id}', [registerAdminController::class, 'deleteAdmin'])->name('admin.deleteAdmin');   
 });
 
-
+Route::get('/pago', [CartController::class, 'pago'])->name('pago');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
 Route::post('/add', [CartController::class, 'add'])->name('cart.store');
 Route::post('/update', [CartController::class, 'update'])->name('cart.update');
 Route::post('/remove', [CartController::class, 'remove'])->name('cart.remove');
 Route::post('/clear', [CartController::class, 'clear'])->name('cart.clear');
+/*Route::post('/payment/confirmation', [CartController::class, 'Paymentconfirmation'])->name('payment.confirmation');*/
+
+
+Route::post('/paymentsuccess', [CartController::class, 'Paymentconfirmation'])->name('payment.success');
+Route::get('/paymentsuccess', function () {
+    return view('home.paymentsuccess'); 
+})->name('payment.success.view');
+
+

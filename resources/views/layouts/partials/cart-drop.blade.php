@@ -36,8 +36,8 @@
         <a class="btn btn-dark btn-sm btn-block" href="{{ route('cart.index') }}">
             CARRITO <i class="fa fa-arrow-right"></i>
         </a>
-        <a class="btn btn-dark btn-sm btn-block" href="">
-            CHECKOUT <i class="fa fa-arrow-right"></i>
+        <a class="btn btn-dark btn-sm btn-block" href="pago">
+            PAGO <i class="fa fa-arrow-right"></i>
         </a>
     </div>
 @else
