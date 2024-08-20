@@ -10,9 +10,13 @@ class CartController extends Controller
 
     public function cart()  {
         $cartCollection = \Cart::getContent();
-        //dd($cartCollection);
         return view('home.cart')->withTitle('ByteMex')->with(['cartCollection' => $cartCollection]);;
     }
+    public function pago() {
+        $cartCollection = \Cart::getContent();
+        return view('home.pago')->with(['cartCollection' => $cartCollection]);
+    }
+    
     public function remove(Request $request){
         \Cart::remove($request->id);
         return redirect()->route('cart.index')->with('success_msg', 'Item is removed!');
@@ -48,6 +52,19 @@ class CartController extends Controller
         return redirect()->route('cart.index')->with('success_msg', 'Car is cleared!');
     }
 
+    /*public function Paymentconfirmation(Request $request) {
+    
+        \Cart::clear();
+    
+        return redirect()->route('home')->with('success_msg', 'Pago realizado con éxito y carrito vacío.');
+    }*/
+    
+    public function Paymentconfirmation(Request $request) {
+        \Cart::clear();
+    
+        return redirect()->route('payment.success.view');
+    }
+    
  
 
 }
