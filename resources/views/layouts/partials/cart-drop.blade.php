@@ -37,7 +37,7 @@
             CARRITO <i class="fa fa-arrow-right"></i>
         </a>
         <a class="btn btn-dark btn-sm btn-block" href="pago">
-            CHECKOUT <i class="fa fa-arrow-right"></i>
+            PAGO <i class="fa fa-arrow-right"></i>
         </a>
     </div>
 @else
