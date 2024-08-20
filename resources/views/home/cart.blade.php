@@ -156,7 +156,7 @@
                         </ul>
                     </div>
                     <br><a href="/menu" class="btn btn-dark" data-translate="continTiend">Continue en la tienda</a>
-                    <a href="/checkout" class="btn btn-success" data-translate="proceder">Proceder al Checkout</a>
+                    <a href="/pago" class="btn btn-success" data-translate="proceder">Proceder al Checkout</a>
                 </div>
             @endif
         </div>

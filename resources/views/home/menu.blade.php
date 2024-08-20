@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 <body>
-@include('layouts.partials.navbar2')
+  @include('layouts.partials.navbar2')
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 d-flex justify-content-end my-4">

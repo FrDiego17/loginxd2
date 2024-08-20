@@ -23,3 +23,4 @@ class AdminAuth
         return redirect ()->to('/home');
     }
 }
+    

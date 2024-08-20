@@ -10,6 +10,7 @@
     <link rel="icon" href="{{ url('assets2/img/favicon.webp')}}">
 </head>
 <body>
+    
     <div class="nav_admin">
         <header>
             <nav class="navbar navbar-expand-lg bg-primary border-bottom border-body ">

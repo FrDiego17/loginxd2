@@ -352,9 +352,9 @@ body {
 }
 
 .carousel-control-prev, .carousel-control-next{
-  width: 8vh;
+  width: 8vh !important ;
   height: 8vh;
-  background-color: red;
+  background-color: rgba(255, 174, 13, 0.831);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
