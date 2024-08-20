@@ -196,12 +196,12 @@
 
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label" data-translate="contrasena-admin">Contraseña del Admin</label>
-                                                <input type="password" name="txtpassword" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="password" name="txtpassword" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$item->password}}">
                                             </div>
 
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label" data-translate="confirmar-contrasena">Confirmación de Contraseña</label>
-                                                <input type="password" name="txtpassword_confirmation" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="password" name="txtpassword_confirmation" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$item->password}}">
                                             </div>
 
                                             <div class="modal-footer">
