@@ -13,14 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Playfair+Display+SC:ital,
     wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+    
     @include('layouts.partials.navbar')
 
 
     @yield('content')
     @include('layouts.partials.fooder')    
 
+
+    <script src="{{ url('assets2/js/translate.js')}}"></script>
     <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

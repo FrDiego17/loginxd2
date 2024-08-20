@@ -37,6 +37,10 @@ class HomeController extends Controller
     public function pago(){
         return view('home.pago');
     }
+
+    public function indexjs(){
+        return view('home.indexjs');
+    }
     
 }
 

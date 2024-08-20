@@ -23,6 +23,7 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/indexjs', [HomeController::class, 'indexjs'])->name('indexjs');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/menu', [HomeController::class, 'show'])->name('menu');
 Route::get('/chat', [HomeController::class, 'chat'])->name('chat');

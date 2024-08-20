@@ -379,3 +379,4 @@ window.addEventListener('load', () => {
 
 /*Animacion para lo del admin*/ 
 
+  
