@@ -76,7 +76,7 @@
                                         <div class="col-8 text-end description"><div class="dive">Subtotal</div></div>
                                         <div class="col-4 text-end"><span class="emphasized">${{ \Cart::getSubTotal() }}</span></div>
                                         <div class="col-8 text-end description"><div class="dive" data-translate="propi">Propina</div></div>
-                                        <div class="col-4 text-end"><span class="emphasized">$0.50</span></div>
+                                        <div class="col-4 text-end"><span class="emphasized">$0.00</span></div>
                                         <div class="col-8 text-end description"><div class="dive" data-translate="shipment">Envío</div></div>
                                         <div class="col-4 text-end"><span class="emphasized">$0.00</span></div>
                                     </div>
