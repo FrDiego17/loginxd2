@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .logo, .brand-name {
     display: none;
 }
@@ -23,15 +30,62 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: black;
-    background-image: url('../img/backinterfaz.png'); 
-    background-size: cover;
+    background: #0c192c;    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: static;
     height: 120vh; /* Ajusta la altura al 100% de la altura del viewport */
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
+}
+
+
+.contadu{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.burbuja{
+  position: relative;
+  display: flex;
+}
+
+.burbuja span{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 
+  0 0 50px #4fc3dc,
+  0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(150s / var(--i));
+}
+
+
+
+.burbuja span:nth-child(even){
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544,
+  0 0 50px #ff2d75,
+  0 0 100px 
+  #ff2d75;;
+}
+
+
+
+@keyframes animate{
+  0%{
+    transform: translateY(100vh) scale(0);
+  }
+  100%{
+    transform: translateY(-10vh) scale(1);
+  }
 }
 
 /* From Uiverse.io by Shoh2008 */ 
@@ -278,3 +332,172 @@ body {
 .btn-close {
     background-color: white;
 }
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+  background: #b93636;
+  position: relative;
+  }
+  .footer-cta {
+  border-bottom: 1px solid #272525;
+  }
+  .single-cta i {
+  color: #ff1414;
+  font-size: 40px;
+  float: left;
+  margin-top: 8px;
+  }
+  .cta-text {
+  padding-left: 15px;
+  display: inline-block;
+  }
+  .cta-text h4 {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  }
+  .cta-text span {
+  color: #757575;
+  font-size: 15px;
+  }
+  .footer-content {
+  position: relative;
+  z-index: 2;
+  height: 14rem;
+  }
+  .footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+  }
+  .footer-logo {
+  margin-bottom: 30px;
+  }
+  .footer-logo img {
+    max-width: 200px;
+  }
+  .footer-text p {
+  margin-bottom: 32px;
+  font-size: 12px;
+  color: #b4adad;
+  line-height: 20px;
+  }
+  .footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 4px;
+  }
+  .footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+  }
+  .footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  }
+  .footer-social-icon{
+  margin-top: -1rem;
+  }
+  .facebook-bg{
+  background: #3B5998;
+  }
+  .twitter-bg{
+  background: #55ACEE;
+  }
+  .google-bg{
+  background: #DD4B39;
+  }
+  .footer-widget-heading h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+  }
+  .footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff1414;
+  }
+  .footer-widget ul li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: -10px;
+  }
+  .footer-widget ul li a:hover{
+  color: #ff1414;
+  }
+  .footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+  }
+  .footer-widget{
+  margin-bottom: 3rem !important;
+  }
+  
+  .subscribe-form {
+  position: relative;
+  overflow: hidden;
+  }
+  .copyright-area{
+  background: #202020;
+  padding: 5px 0;
+  }
+  .copyright-text p {
+  white-space: nowrap;    
+  margin: 0;
+  font-size: 12px;
+  color: #878787;
+  }
+  .copyright-text p a{
+  color: #ff1414;
+  }
+  .footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+  }
+  .footer-menu li:hover a{
+  color: #ff1414;
+  }
+  .footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+  }
+  .text-red {
+    color: #ff1414; /* Puedes ajustar este código de color a cualquier tono de rojo que prefieras */
+  }
+  .pt-5 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  }
+  
+  .afooter{
+  font-size: 10pt;
+  }
+  
+  .enlace{
+  margin-bottom: 20px  !important;
+  }
+  
+  .textofoot{
+      font-size: 14px;
+     
+  }

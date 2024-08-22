@@ -13,72 +13,46 @@
 
 <body>
     
-    <div class="indicator"></div>
-    
-    <div id="demo"></div>
-
-    <div class="details" id="details-even">
-      <div class="place-box">
-        <div class="text"></div>
-      </div>
-      <div class="title-box-1"><div class="title-1"></div></div>
-      <div class="title-box-2"><div class="title-2">BYTEMEX</div></div>
-      <div class="desc">
-        "¡Descubre el auténtico sabor de México en cada bocado! Ven y prueba nuestros deliciosos platillos." 
-      </div>
-      
+  <div class="contadu">
+    <div class="burbuja">
+      <span style="--i:22;"></span>
+      <span style="--i:34;"></span>
+      <span style="--i:45;"></span>
+      <span style="--i:34;"></span>
+      <span style="--i:53;"></span>
+      <span style="--i:64;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:27;"></span>
+      <span style="--i:31;"></span>
+      <span style="--i:45;"></span>
+      <span style="--i:34;"></span>
+      <span style="--i:53;"></span>
+      <span style="--i:64;"></span>
+      <span style="--i:01;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:29;"></span>
+      <span style="--i:34;"></span>
+      <span style="--i:45;"></span>
+      <span style="--i:34;"></span>
+      <span style="--i:53;"></span>
+      <span style="--i:64;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:34;"></span>
+      <span style="--i:53;"></span>
+      <span style="--i:64;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:39;"></span>
+      <span style="--i:69;"></span>
+      <span style="--i:29;"></span>
+      <span style="--i:60;"></span>
+      <span style="--i:32;"></span>
+      <span style="--i:99;"></span>
+      <span style="--i:39;"></span>
     </div>
-
-    <div class="details" id="details-odd">
-      <div class="place-box">
-        <div class="text"></div>
-      </div>
-      <div class="title-box-1"><div class="title-1"></div></div>
-      <div class="title-box-2"><div class="title-2">BYTEMEX</div></div>
-      <div class="desc">
-        <h1>Disfruta de auténticos sabores mexicanos con ingredientes frescos y seleccionados especialmente para ti.</h1>
-      </div>
-
-    </div>
-
-    <div class="pagination" id="pagination">
-      <div class="arrow arrow-left">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 19.5L8.25 12l7.5-7.5"
-          />
-        </svg>
-      </div>
-      <div class="arrow arrow-right">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-          />
-        </svg>
-      </div>
-      <div class="progress-sub-container" >
-        <div class="progress-sub-background" >
-            <div class="progress-sub-foreground" ></div>
-        </div>
-    </div>
-    <div class="slide-numbers" id="slide-numbers"></div>
-    </div>
-
-    <div class="cover" ></div>
+  </div>
    
 
    

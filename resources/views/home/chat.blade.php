@@ -10,20 +10,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url('assets2/css/chat.css')}}">
     <link rel="stylesheet" href="{{ url('assets2/css/interfaz.css')}}">
+    <script src="https://kit.fontawesome.com/beae16a269.js" crossorigin="anonymous"></script>
     <script>
         var avatarUrl = "{{ url('assets2/img/Mexibot.png') }}";
     </script>
 </head>
 <body>
 @include('layouts.partials.navbar')
+<div class="col-12 d-flex justify-content-end my-4">
+  <div class="checkbox-wrapper-8">
+      <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" onclick="toggleLanguage()">
+      <label for="cb3-8" data-tg-on="EN" data-tg-off="ES" class="tgl-btn"></label>
+  </div>
+</div>
+<div class="contadu">
+  <div class="burbuja">
+    <span style="--i:22;"></span>
+    <span style="--i:34;"></span>
+    <span style="--i:45;"></span>
+    <span style="--i:34;"></span>
+    <span style="--i:53;"></span>
+    <span style="--i:64;"></span>
+    <span style="--i:21;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:27;"></span>
+    <span style="--i:31;"></span>
+    <span style="--i:45;"></span>
+    <span style="--i:34;"></span>
+    <span style="--i:53;"></span>
+    <span style="--i:64;"></span>
+    <span style="--i:01;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:29;"></span>
+    <span style="--i:34;"></span>
+    <span style="--i:45;"></span>
+    <span style="--i:34;"></span>
+    <span style="--i:53;"></span>
+    <span style="--i:64;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:34;"></span>
+    <span style="--i:53;"></span>
+    <span style="--i:64;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:39;"></span>
+    <span style="--i:69;"></span>
+    <span style="--i:29;"></span>
+    <span style="--i:60;"></span>
+    <span style="--i:32;"></span>
+    <span style="--i:99;"></span>
+    <span style="--i:39;"></span>
+  </div>
+</div>
 <div class="container-fluid">
   <div class="row">
-      <div class="col-12 d-flex justify-content-end my-4">
-          <div class="checkbox-wrapper-8">
-              <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" onclick="toggleLanguage()">
-              <label for="cb3-8" data-tg-on="EN" data-tg-off="ES" class="tgl-btn"></label>
-          </div>
-      </div>
   </div>
 </div>
   <div class="chat">
@@ -43,7 +84,8 @@
     </div>
   </div>
   
-  
+  @include('layouts.partials.fooder')    
+
   <!-- jQuery (cargado antes del script.js) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
