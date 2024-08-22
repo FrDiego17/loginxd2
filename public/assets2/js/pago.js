@@ -1,5 +1,5 @@
 document.getElementById('confirmationpayment').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir el envío del formulario para mostrar la notificación
+    event.preventDefault(); 
 
     Swal.fire({
         position: 'top-end',
@@ -8,7 +8,6 @@ document.getElementById('confirmationpayment').addEventListener('submit', functi
         showConfirmButton: false,
         timer: 1500
     }).then(() => {
-        // Redirige al usuario al menú después de que la notificación desaparezca
         window.location.href = '/menu';
     });
 });
