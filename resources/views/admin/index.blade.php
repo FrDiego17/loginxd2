@@ -10,48 +10,43 @@
     <link rel="icon" href="{{ url('assets2/img/favicon.webp')}}">
 </head>
 <body>
-    <div class="nav_admin">
-        <header>
-            <nav class="navbar navbar-expand-lg bg-primary border-bottom border-body ">
-                <div class="container-fluid">
-                    <a class="navbar-brand" data-translate="ByteMex">ByteMex</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/menu" data-translate="menu">Menú</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/reservasadmin" data-translate="reservas">Reservas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/registeradmin" data-translate="Register Admin">Registar Admin</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active mx-lg-1 text-light" aria-current="page" href="/logout" data-translate="Logout">Cerrar Sesion</a>
-                            </li>
-                        </ul>
-                        <span class="navbar-text text-light" data-translate="bienveni-admin">
-                            Bienvenido Administrador
-                        </span>
+        <div class="nav_admin">
+            <header>
+                <nav class="navbar navbar-expand-lg bg-primary border-bottom border-body ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" data-translate="ByteMex">ByteMex</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active mx-lg-1 " aria-current="page" href="/menu" data-translate="menu">Menú</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active mx-lg-1 " aria-current="page" href="/reservasadmin" data-translate="reservas">Reservas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active mx-lg-1" aria-current="page" href="/registeradmin" data-translate="Register Admin">Registar Admin</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active mx-lg-1 " aria-current="page" href="/logout" data-translate="Logout">Cerrar Sesion</a>
+                                </li>
+                            </ul>
+                            <label for="switch" class="switch">
+                                <input id="switch" type="checkbox" />
+                                <span class="slider"></span>
+                                <span class="decoration"></span>
+                              </label>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </header>
-    </div>
+                </nav>
+            </header>
+        </div>
     <div class="container-fluid">
         <div class="col-12 d-flex justify-content-end align-items-center my-4">
-            <div>
-                <label aria-checked="false" role="switch" class="switch">
-                    <input type="checkbox" id="theme-toggle" />
-                    <span class="slider">
-                        <span class="slider-inner"></span>
-                    </span>
-                </label>
-            </div>
             
+              
             <!-- Botón de cambio de idioma -->
             <div class="checkbox-wrapper-8 me-3">
                 <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" onclick="toggleLanguage()">
@@ -144,7 +139,7 @@
                     <th scope="col" data-translate="Name">NOMBRE</th>
                     <th scope="col" data-translate="Price">PRECIO</th>
                     <th scope="col" data-translate="Quantity">CANTIDAD</th>
-                    <th></th>
+                    <th scope="col" data-translate="axe">Acción</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">

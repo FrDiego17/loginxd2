@@ -1,47 +1,34 @@
 const data = [
     {
-      place: "",
-      title: "",
+      
       title2: "BYTEMEX",
-      description:
-        "Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.",
       image: "/assets2/img/tacos.jpg"
     },
     {
-      place: "",
-      title: "",
       title2: "BYTEMEX",
       description:
         "Disfruta de auténticos sabores mexicanos con ingredientes frescos y seleccionados especialmente para ti.",
       image: "/assets2/img/wallmenu.jpg"
     },
     {
-      place: "",
-      title: "",
       title2: "BYTEMEX",
       description:
         "¡La comida mexicana como debe ser! Prueba nuestros platos frescos y llenos de sabor",
       image: "/assets2/img/index.imagen2.png"
     },
     {
-      place: "",
-      title: "",
       title2: "BYTEMEX",
       description:
-        "Descubre una sinfonía de sabores con nuestra variada selección de platillos, desde auténticos tacos al pastor y enchiladas caseras, hasta deliciosos burritos, quesadillas y nachos, cada uno elaborado con ingredientes frescos y recetas tradicionales que celebran la riqueza de la cocina mexicana.",
+        "¡Disfruta de la verdadera comida mexicana sin salir de la ciudad! Visítanos hoy.",
       image: "/assets2/img/micro12.jpg"
     },
     {
-      place: "",
-      title: "",
       title2: "BYTEMEX",
       description:
-        "Nuestro amable y experto personal está dedicado a brindarte una experiencia excepcional, con un servicio atento y personalizado que refleja el verdadero espíritu de la hospitalidad mexicana. Ven y disfruta de la calidez y profesionalismo que solo nuestro equipo puede ofrecer.",
+        "Nuestro amable y experto personal está dedicado a brindarte una experiencia excepcional",
       image: "/assets2/img/micro69.jpg"
     },
     {
-      place: "",
-      title: "",
       title2: "BYTEMEX",
       description:
         "Crea increíbles recuerdos junto a tus amigos o personas especiales, y comparte una maravillosa experiencia junto a ellos!.",
@@ -61,8 +48,6 @@ const data = [
     .map(
       (i, index) => `<div class="card-content" id="card-content-${index}">
   <div class="content-start"></div>
-  <div class="content-place">${i.place}</div>
-  <div class="content-title-1">${i.title}</div>
   <div class="content-title-2">${i.title2}</div>
   
   </div>`

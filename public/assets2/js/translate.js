@@ -140,6 +140,7 @@ const traducciones = {
         "fechaEx": "Fecha de expiración",
         "noquiero": "Cancelar",
         "confi": "Confirmar y pagar",
+        "axe": "Acción",
         // Placeholders
         "correo-placeholder": "Ingresa un correo válido",
         "nombre-placeholder": "Ingresa tu nombre",
@@ -287,6 +288,7 @@ const traducciones = {
         "fechaEx": "Expiration date",
         "noquiero": "Cancel",
         "confi": "Confirm and pay",
+        "axe": "Action",
         // Placeholders
         "correo-placeholder": "Enter a valid email",
         "nombre-placeholder": "Enter your name",
@@ -327,44 +329,33 @@ function setLanguage(lang) {
     localStorage.setItem("language", lang);
 }
 
-function toggleTheme() {
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle.checked) {
-        applyDarkMode();
-    } else {
-        applyLightMode();
-    }
-}
 
-function applyDarkMode() {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('theme', 'dark');
-}
+const toggleSwitch = document.getElementById('switch');
 
-function applyLightMode() {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('theme', 'light');
-}
-
+// Inicializar el tema al cargar la página
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const themeToggle = document.getElementById('theme-toggle');
-    if (savedTheme === 'dark') {
-        themeToggle.checked = true;
-        applyDarkMode();
-    } else {
-        themeToggle.checked = false;
-        applyLightMode();
-    }
+  const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
+  if (darkModeEnabled) {
+    document.body.classList.add('dark-mode');
+    document.body.classList.remove('light-mode');
+  } else {
+    document.body.classList.add('light-mode');
+    document.body.classList.remove('dark-mode');
+  }
 }
 
-function confirmDelete(event) {
-    event.preventDefault(); // Previene la acción predeterminada del enlace
-    const confirmed = confirm("Estás a punto de eliminar este usuario, ¿Estás seguro?");
-    if (confirmed) {
-        window.location.href = event.currentTarget.href;
-    }
+// Alternar entre modo oscuro y claro
+function toggleTheme() {
+  const isDarkMode = document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('light-mode', !isDarkMode);
+  localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
 }
+
+// Evento para el cambio de tema
+toggleSwitch.addEventListener('click', toggleTheme);
+
+// Inicializar el tema correcto al cargar la página
+initTheme();
 
 // Cargar el idioma y el tema guardados al cargar la página
 window.addEventListener('load', () => {

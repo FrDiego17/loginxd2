@@ -51,7 +51,6 @@
             <div class="place-box">
                 <div class="text textoIndex"></div>
             </div>
-            <div class="title-box-1"><div class="title-1"></div></div>
             <div class="title-box-2"><div class="title-2">BYTEMEX</div></div>
             <div class="desc">
                 "¡Descubre el auténtico sabor de México en cada bocado! Ven y prueba nuestros deliciosos platillos." 
@@ -60,8 +59,7 @@
             <div class="details" id="details-odd">
                 <div class="place-box">
                 <div class="text"></div>
-                </div>
-                <div class="title-box-1"><div class="title-1"></div></div>
+                </div>  
                 <div class="title-box-2"><div class="title-2">BYTEMEX</div></div>
                 <div class="desc">
                 <h1>Disfruta de auténticos sabores mexicanos con ingredientes frescos y seleccionados especialmente para ti.</h1>
@@ -128,7 +126,7 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav d-flex justify-content-center flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link active mx-lg-1" aria-current="page" href="/login" data-translate="Inicio-Sesión">Inicio de Sesión</a>
+                                    <a class="nav-link active mx-lg-1" aria-current="page" href="/login" data-translate="inicia-sesion">Inicio de Sesión</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active mx-lg-1" href="/menu" data-translate="menu">Menú</a>
