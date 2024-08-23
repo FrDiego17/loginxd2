@@ -23,6 +23,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <!-- Carrito Icono  -->
+                <li>
+                    <label for="switch" class="switch">
+                        <input id="switch" type="checkbox" />
+                        <span class="slider"></span>
+                        <span class="decoration"></span>
+                      </label>
+                </li>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle"
                        href="#" role="button" data-toggle="dropdown"
@@ -32,6 +39,7 @@
                             <i class="fa fa-shopping-cart"></i> {{ \Cart::getTotalQuantity()}}
                         </span>
                     </a>
+                    
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="width: 450px; z-index: -5; padding: 0px; border-color: #9DA0A2">
                         <ul class="list-group" style="margin: 20px;">
@@ -49,14 +57,7 @@
     <div class="container" style="margin-top: 80px">
         <div class="container-fluid">
             <div class="col-12 d-flex justify-content-end align-items-center my-4">
-                <div>
-                    <label aria-checked="false" role="switch" class="switch">
-                        <input type="checkbox" id="theme-toggle" />
-                        <span class="slider">
-                            <span class="slider-inner"></span>
-                        </span>
-                    </label>
-                </div>
+             
                 
                 <!-- Botón de cambio de idioma -->
                 <div class="checkbox-wrapper-8 me-3">
@@ -67,7 +68,7 @@
         </div> 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item" data-translate="tienda"><a href="/">Tienda</a></li>
+                <li class="breadcrumb-item tienda" data-translate="tienda"><a href="/">Tienda</a></li>
                 <li class="breadcrumb-item active" aria-current="page" data-translate="carrito">Carrito</li>
             </ol>
         </nav>
