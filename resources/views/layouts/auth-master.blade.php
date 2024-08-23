@@ -6,6 +6,7 @@
     <title>Aplicacion de Login</title>
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url('assets2/css/Login.css')}}">
+    <link rel="stylesheet" href="{{ url('assets2/css/eye.css')}}">
     <link rel="icon" href="{{ url('assets2/img/calavera-mexicana.png')}}">
 </head>
 <body>
@@ -16,5 +17,6 @@
         
     </main>
     <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url('assets2/js/Contraseña.js')}}"></script>
 </body>
 </html>
