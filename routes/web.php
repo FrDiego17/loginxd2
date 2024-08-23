@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\registerAdminController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\MessageController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,7 +22,10 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [SessionsController::class, 'create'])->name('login');
     Route::post('/login', [SessionsController::class, 'login'])->name('login.post');
 });
-
+Route::controller(MessageController::class)->group(function () {
+    Route::post("/init", 'start');  
+    Route::post("/send", 'send');  
+});
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/indexjs', [HomeController::class, 'indexjs'])->name('indexjs');
 Route::get('/', [HomeController::class, 'index'])->name('home');

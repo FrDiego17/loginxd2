@@ -99,8 +99,14 @@
         <p class=" honk-menu text-center">{{array_keys($filtro)[$i]}}</p>
           <div id="carouselExampleControls{{$i}}" class="carousel">
             <div class="carousel-inner">
+              @php
+                $j = 0;
+              @endphp
               @foreach ($filtro[array_keys($filtro)[$i]] as $producto)
-                  <div class="carousel-item active">
+                @php
+                  $j++;
+                @endphp
+                  <div class="carousel-item @if($j == 1) {{ 'active' }} @endif">
                   <div class="container">  
                     <div class="card">
                       @if (isset($producto->image))
