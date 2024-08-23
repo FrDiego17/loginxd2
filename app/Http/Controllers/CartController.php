@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Rules\Validacion;
 use App\Models\Product;
 
 class CartController extends Controller
@@ -52,20 +54,41 @@ class CartController extends Controller
         return redirect()->route('cart.index')->with('success_msg', 'Car is cleared!');
     }
 
-    /*public function Paymentconfirmation(Request $request) {
-    
-        \Cart::clear();
-    
-        return redirect()->route('home')->with('success_msg', 'Pago realizado con éxito y carrito vacío.');
-    }*/
-    
     public function Paymentconfirmation(Request $request) {
+        
+        $validatedData = $request->validate([
+            'card-name' => 'required|string|max:255',
+            'card-number' => 'required|digits:16',
+            'card-expiration' => [
+                'required',
+                'regex:/^(0[1-9]|1[0-2])\/\d{4}$/',
+                new Validacion
+            ],
+            'card-ccv' => 'required|digits:3',
+        ], [
+            'card-name.required' => 'El nombre en la tarjeta es obligatorio.',
+            'card-number.required' => 'El número de la tarjeta es obligatorio.',
+            'card-number.digits' => 'El número de la tarjeta debe tener exactamente 16 dígitos.',
+            'card-expiration.required' => 'La fecha de expiración es obligatoria.',
+            'card-expiration.regex' => 'La fecha de expiración debe tener el formato MM/AAAA.',
+            'card-expiration.after_or_equal' => 'La fecha de expiración debe ser actual o futura.',
+            'card-ccv.required' => 'El CVC/CCV es obligatorio.',
+            'card-ccv.digits' => 'El CVC/CCV debe tener exactamente 3 dígitos.',
+        ]);
+    
+        DB::table('pago')->insert([
+            'card_name' => $validatedData['card-name'],
+            'card_number' => $validatedData['card-number'],
+            'card_expiration' => $validatedData['card-expiration'],
+            'card_ccv' => $validatedData['card-ccv'],
+            'total_amount' => \Cart::getTotal(),
+        ]);
+    
         \Cart::clear();
     
-        return redirect()->route('payment.success.view');
+        return redirect()->route('payment.success.view')->with('success', '¡Pago realizado con éxito!');
     }
     
- 
-
+    
 }
 

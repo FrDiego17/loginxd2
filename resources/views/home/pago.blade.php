@@ -99,8 +99,11 @@
                                     </div>
                                 </div>
                                 <div class="col-12 panel-body creditcard-body" style="max-height: 500px;">
-                                    <form action="{{ route('payment.success') }}" method="post" target="_self">
+                                    <form action="{{ route('payment.confirmation') }}" method="post" target="_self">
                                         @csrf
+                                        <span>
+                                            @include('layouts.partials.messages')
+                                        </span>
                                         <fieldset>
                                             <label for="card-name" data-translate="tarjetanombre">Nombre en la Tarjeta</label><br>
                                             <i class="fa fa-user-o" aria-hidden="true"></i>

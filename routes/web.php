@@ -58,8 +58,7 @@ Route::post('/remove', [CartController::class, 'remove'])->name('cart.remove');
 Route::post('/clear', [CartController::class, 'clear'])->name('cart.clear');
 /*Route::post('/payment/confirmation', [CartController::class, 'Paymentconfirmation'])->name('payment.confirmation');*/
 
-
-Route::post('/paymentsuccess', [CartController::class, 'Paymentconfirmation'])->name('payment.success');
+Route::post('/payment/confirmation', [CartController::class, 'Paymentconfirmation'])->name('payment.confirmation');
 Route::get('/paymentsuccess', function () {
     return view('home.paymentsuccess'); 
 })->name('payment.success.view');
