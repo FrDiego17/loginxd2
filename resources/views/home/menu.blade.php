@@ -103,10 +103,7 @@
                 $j = 0;
               @endphp
               @foreach ($filtro[array_keys($filtro)[$i]] as $producto)
-                @php
-                  $j++;
-                @endphp
-                  <div class="carousel-item @if($j == 1) {{ 'active' }} @endif">
+                  <div class="carousel-item active">
                   <div class="container">  
                     <div class="card">
                       @if (isset($producto->image))
