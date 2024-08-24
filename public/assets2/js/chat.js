@@ -1,3 +1,4 @@
+let session_stats = null;
 $(document).ready(function() {
   var $messages = $('.messages-content'),
       d, h, m,
@@ -33,9 +34,9 @@ $(document).ready(function() {
       $('<div class="message message-personal">' + msg + '<div class="timestamp"></div></div>').appendTo($('.mCSB_container')).addClass('new');
       setDate();
       updateScrollbar();
-      setTimeout(function() {
-          fakeMessage();
-      }, 1000 + (Math.random() * 20) * 100);
+    //   setTimeout(function() {
+    //       fakeMessage();
+    //   }, 1000 + (Math.random() * 20) * 100);
   }
 
   // Función para insertar un mensaje del chatbot
@@ -46,19 +47,42 @@ $(document).ready(function() {
   }
 
   // Manejador para el click en el botón de enviar mensaje
-  $('.message-submit').click(function() {
-      var msg = $('.message-input').val();
-      insertUserMessage(msg);
-      $('.message-input').val('');
+  $('.message-submit').click(async function() {
+      await sendingMessage()
   });
 
+  async function sendingMessage() {
+    if(!session_stats) {
+        const response = await axios.post('/init')
+        session_stats = response.data
+    }
+    var msg = $('.message-input').val().trim();
+    msg = msg.replace(/^\s+|\s+$/g, '')
+    const msgResponse = await axios.post('/send', {
+        session_id: session_stats.session_id,
+        session_token: session_stats.session_token,
+        msg
+    })
+    const {messages} = msgResponse.data
+    insertUserMessage(msg);
+      $('.message-input').val('');
+    messages.forEach(msg => {
+        $('<div class="message loading new"><figure class="avatar"><img src="' + avatarUrl + '" alt="Avatar"></figure><span></span></div>').appendTo($('.mCSB_container'));
+        updateScrollbar();
+        if(typeof msg === 'object' && msg.text) {
+            setTimeout(function() {
+                $('.message.loading').remove();
+                insertChatbotMessage(msg.text);
+                updateScrollbar();
+            }, 1000 + (Math.random() * 20) * 100);
+        }
+    })
+  }
   // Manejador para la tecla Enter en el input de mensaje
-  $(window).on('keydown', function(e) {
+  $(window).on('keydown', async function(e) {
       if (e.which == 13) {
-          var msg = $('.message-input').val();
-          insertUserMessage(msg);
-          $('.message-input').val('');
-          return false;
+        await sendingMessage()
+        //   return false;
       }
   });
 
