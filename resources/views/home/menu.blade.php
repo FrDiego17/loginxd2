@@ -67,7 +67,7 @@
                                 <input type="hidden" name="quantity" value="1">
 
                                 <button class="btn btn-secondary btn-sm" class="tooltip-test" title="add to cart">
-                                    <i class="fa fa-shopping-cart"></i> agregar al carrito
+                                    <i class="fa fa-shopping-cart" data-translate="compra2">agregar al carrito</i> 
                                 </button>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                         <h2>{{$producto->Nombre}}</h2> 
                         <h2>Precio:</h2> 
                         <h4 class="text-white-50">${{ $producto->Precio }}</h4>  
-                        <a href="#">Comprar</a>  
+                        <a href="#" data-translate="compra">Comprar</a>  
                       </div>  
                     </div>  
                   </div>
@@ -145,6 +145,7 @@
   <script src="{{ url('assets/js/bootstrap.min.js')}}"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="{{ url('assets2/js/menu.js')}}"></script>
+  <script src="{{ url('assets2/js/translate.js')}}"></script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

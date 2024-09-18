@@ -163,8 +163,11 @@ body {
 
 #doodles{
   --opacidad-negro: 0.5;
-  background-image: url(../img/fonddd.jpg) ;
+  background-image: url(../img/) ;
   margin: 0;
+  background-color: #336496; 
+  backdrop-filter: blur(10px);/* Un tono más oscuro para contrastar mejor con el negro */
+  animation: fondoMexicanoSutil 10s infinite alternate;
   padding: 0;
   font-family: Arial, sans-serif;
   background-size: cover;
@@ -174,6 +177,25 @@ body {
   width: 100%;
   z-index: -1; /
 }
+
+@keyframes fondoMexicanoSutil {
+  0% {
+    background-color: #4980b8; /* Azul oscuro */
+  }
+  25% {
+    background-color: #679dbd; /* Verde oscuro y grisáceo */
+  }
+  50% {
+    background-color: #556a83; /* Gris suave */
+  }
+  75% {
+    background-color: #5b88b6; /* Azul grisáceo */
+  }
+  100% {
+    background-color: #4078b1; /* Vuelve al azul oscuro */
+  }
+}
+
 .container {  
   position: relative;
   width: 80%;
