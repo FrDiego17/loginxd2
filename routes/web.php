@@ -11,6 +11,9 @@ use App\Http\Controllers\registerAdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MessageController;
 
+use App\Http\Controllers\MessageControllerEnglish;
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,6 +28,10 @@ Route::middleware('guest')->group(function () {
 Route::controller(MessageController::class)->group(function () {
     Route::post("/init", 'start');  
     Route::post("/send", 'send');  
+});
+Route::controller(MessageControllerEnglish::class)->group(function () {
+    Route::post("/en/init", 'start');  
+    Route::post("/en/send", 'send');  
 });
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/indexjs', [HomeController::class, 'indexjs'])->name('indexjs');

@@ -1,4 +1,8 @@
 let session_stats = null;
+const checkbox = document.getElementById('cb3-8');
+checkbox.addEventListener("change", (e) => {
+    checkbox.value = checkbox.value === "on" ? "off" : "on"
+})
 $(document).ready(function() {
   var $messages = $('.messages-content'),
       d, h, m,
@@ -53,12 +57,12 @@ $(document).ready(function() {
 
   async function sendingMessage() {
     if(!session_stats) {
-        const response = await axios.post('/init')
+        const response = await axios.post(checkbox.value === "off" ? "/en/init" : '/init')
         session_stats = response.data
     }
     var msg = $('.message-input').val().trim();
     msg = msg.replace(/^\s+|\s+$/g, '')
-    const msgResponse = await axios.post('/send', {
+    const msgResponse = await axios.post(checkbox.value === "off" ? "/en/send" : '/send', {
         session_id: session_stats.session_id,
         session_token: session_stats.session_token,
         msg

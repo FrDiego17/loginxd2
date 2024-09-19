@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
-class MessageController extends Controller
+class MessageControllerEnglish extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,9 +32,9 @@ class MessageController extends Controller
     public function start(Request $request) {
         // $message = $request->input('msg');
         return Http::withHeaders([
-            'X-Vgai-Key' => 'E3SL0WNOBQ6djyXJTXfteDZUokpT7n', 
+            'X-Vgai-Key' => 'uh2G1xNGR35KjFyUevZDEzP3mJatgZ', 
             'Content-Type' => 'application/json'
-        ])->post('https://studio-api-us.ai.vonage.com/http/init', ['agent_id' => '66e61296d262d7cd981b5f37'])->json();
+        ])->post('https://studio-api-us.ai.vonage.com/http/init', ['agent_id' => '66e98e03d262d7cd9882426b'])->json();
         // return response()->json($response);
     }
 
