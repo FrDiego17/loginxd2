@@ -18,12 +18,12 @@
     position: relative;
     width: 30px;
     height: 30px;
-    background: #4fc3dc;
+    background: #21910a;
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44, 
-    0 0 50px #4fc3dc,
-    0 0 100px #4fc3dc;
+    box-shadow: 0 0 0 10px #25791444, 
+    0 0 50px #24a014,
+    0 0 100px #24a014;
     animation: animate 15s linear infinite;
     animation-duration: calc(150s / var(--i));
   }
@@ -31,11 +31,11 @@
   
   
   .burbuja span:nth-child(even){
-    background: #ff2d75;
+    background: #a31313;
     box-shadow: 0 0 0 10px #ff2d7544,
-    0 0 50px #ff2d75,
+    0 0 50px #b62020,
     0 0 100px 
-    #ff2d75;;
+    #b62020;;
   }
   
   

@@ -141,6 +141,8 @@ const traducciones = {
         "noquiero": "Cancelar",
         "confi": "Confirmar y pagar",
         "axe": "Acción",
+        "compra": "Comprar",
+        "compra2": "Añadir al carrito",
         // Placeholders
         "correo-placeholder": "Ingresa un correo válido",
         "nombre-placeholder": "Ingresa tu nombre",
@@ -289,6 +291,8 @@ const traducciones = {
         "noquiero": "Cancel",
         "confi": "Confirm and pay",
         "axe": "Action",
+        "compra": "Buy",
+        "compra2": "Add to cart",
         // Placeholders
         "correo-placeholder": "Enter a valid email",
         "nombre-placeholder": "Enter your name",
